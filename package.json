@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "gulp develop",
-    "build": "gulp production"
+    "build": "gulp production",
+    "test" : "jest --watch"
   },
   "author": "Mohammad Kawadri",
   "license": "ISC",
