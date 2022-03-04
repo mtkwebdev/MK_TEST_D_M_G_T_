@@ -1,0 +1,26 @@
+{
+  "name": "dmgt-media-mohammad-kawadri-test",
+  "version": "1.0.0",
+  "description": "dmgt-media-mohammad-kawadri-test",
+  "main": "server.js",
+  "scripts": {
+    "start": "gulp develop",
+    "build": "gulp production"
+  },
+  "author": "Mohammad Kawadri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
+  },
+  "devDependencies": {
+    "browsersync": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "jest": "^27.5.1"
+  }
+}
