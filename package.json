@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp develop",
     "build": "gulp production",
-    "test" : "jest --watch"
+    "test": "jest --watch"
   },
   "author": "Mohammad Kawadri",
   "license": "ISC",
@@ -22,6 +22,11 @@
     "gulp-nodemon": "^2.5.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "jest-get-type": "^27.5.1",
+    "jest-sorted": "^1.0.14"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["jest-sorted"]
   }
 }

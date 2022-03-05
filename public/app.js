@@ -94,5 +94,6 @@ module.exports = {
     readWords: functions.readWords,
     knownPalindromes: data.knownPalindromes, 
     notPalindromes: data.notPalindromes, 
-    sortPeople:functions.sortPeople
+    sortPeople:functions.sortPeople,
+    people: data.people
 };

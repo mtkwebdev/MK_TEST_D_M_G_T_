@@ -1,4 +1,5 @@
-const {palindrome, readWords, knownPalindromes, notPalindromes, sortPeople} = require('../../public/app')
+const {getType} = require('jest-get-type')
+const {palindrome, readWords, knownPalindromes, notPalindromes, sortPeople, people} = require('../../public/app')
 
 test('Does readWords() return a single known palindrome word from a list?', ()=>{
     const word = knownPalindromes.includes(readWords(knownPalindromes))
@@ -17,9 +18,38 @@ test('Does the palindrome function return false if not given palindromes?', ()=>
     expect(palindrome(readWords(notPalindromes))).toBe(false)
 })
 
-test('console log',()=>{
-
-    // console.log(sortPeople('ageByDescending'))
-    // console.log(sortPeople('byfirstNameOrder'))
-    console.log(sortPeople('allAges'))
+test('Does sortPeople with byfirstNameOrder return names in String format and in Acending Alphabetical order?', ()=>{
+    const names = sortPeople('byfirstNameOrder').map((details)=> details.name)
+    expect(getType(names[0])).toBe('string')
+    expect(names[0].toLowerCase().charAt(0)).toBe('a')
 })
+
+test('Does sortPeople with byfirstNameOrder return the correct names to ages?', ()=>{
+    const testCase = {testName: '', testAge: 0, returnedName: '', returnedAge: 0}
+    const mapPeople = people.map(person=>{ testCase.testName= person.name, testCase.testAge = person.age})
+    const mapReturned = sortPeople('byfirstNameOrder').map(person=>{
+        if(person.name === testCase.testName){
+            return testCase.returnedName = person.name, testCase.returnedAge = person.age
+        }
+        })
+        expect(testCase.testName && testCase.testAge).toStrictEqual(testCase.returnedName && testCase.returnedAge)
+})
+
+test('Does sortPeople with ageByDescending return ages as numbers, and also sort ages by descending order?', ()=>{
+    const ages = sortPeople('ageByDescending').map((details)=> details.age)
+    expect(getType(ages[0])).toBe('number')
+    expect(ages).toBeSorted({ descending: true });
+})
+
+test('Does sortPeople ageByDescending return the correct names?', ()=>{
+    const testCase = {testName: '', testAge: 0, returnedName: '', returnedAge: 0}
+    const mapPeople = people.map(person=>{ testCase.testName= person.name, testCase.testAge = person.age})
+    const mapReturned = sortPeople('ageByDescending').map(person=>{
+        if(person.name === testCase.testName){
+            return testCase.returnedName = person.name, testCase.returnedAge = person.age
+        }
+        })
+        expect(testCase.testName && testCase.testAge).toStrictEqual(testCase.returnedName && testCase.returnedAge)
+})
+
+
