@@ -2,7 +2,7 @@ To Do:
 [x] Bonus: Include build tools/packages to test JavaScript and compile your SCSS into CSS.
 [x] Cover the JavaScript functions in step 1 you have written with unit tests.
 [x] Examiner Instructions task 1 
-[] Examiner Instructions task 4 
+[x] Examiner Instructions task 4 
 [] Examiner Instructions task 2 
 [] Examiner Instructions task 3 
 

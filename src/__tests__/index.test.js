@@ -1,4 +1,4 @@
-const {palindrome, readWords, knownPalindromes, notPalindromes} = require('../../public/app')
+const {palindrome, readWords, knownPalindromes, notPalindromes, sortPeople} = require('../../public/app')
 
 test('Does readWords() return a single known palindrome word from a list?', ()=>{
     const word = knownPalindromes.includes(readWords(knownPalindromes))
@@ -17,3 +17,9 @@ test('Does the palindrome function return false if not given palindromes?', ()=>
     expect(palindrome(readWords(notPalindromes))).toBe(false)
 })
 
+test('console log',()=>{
+
+    // console.log(sortPeople('ageByDescending'))
+    // console.log(sortPeople('byfirstNameOrder'))
+    console.log(sortPeople('allAges'))
+})
