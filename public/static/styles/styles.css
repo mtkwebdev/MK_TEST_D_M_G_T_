@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,4 +14,25 @@ body main {
   margin: 50px auto;
   width: 80%;
   height: fit-content;
+}
+
+.card__body {
+  color: black;
+}
+.card__header {
+  color: black;
+}
+.card__main {
+  color: black;
+  width: 50%;
+}
+.card__main > .card__main__price {
+  color: white;
+  background: orange;
+}
+.card__main > .card__main__title {
+  color: navy;
+}
+.card__main > .card__main__textContent {
+  color: black;
 }
