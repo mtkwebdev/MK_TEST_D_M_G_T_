@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-$white : rgb(255, 255, 255);
-$grey : rgb(233, 233, 233);
-$orange : rgb(255, 145, 0);
-$coal:rgb(27, 27, 27);
-$light-coal: rgb(53, 53, 53);
+$font-Nunito: 'Nunito', sans-serif;
+$font-RobotoSlab: 'Roboto Slab', serif;
+
+$color-White : rgb(255, 255, 255);
+$color-Grey : rgb(233, 233, 233);
+$color-DarkGrey:rgb(99, 99, 99);
+$color-Coal: rgb(48, 48, 48);
+$color-Orange : rgb(255, 145, 0);
 
 
 
@@ -21,7 +24,7 @@ body{
     width: 100vw;
     height: 100vh;
     main{
-        margin: 50px auto;
+        margin: 20px auto;
         width: 80%;
         height: fit-content;
     }
@@ -30,34 +33,102 @@ body{
 
 .card{
     $self: &;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: $color-Grey;
+    padding: 15px;
+    width: fit-content;
 
     &__body{
-        color: black;
+        display: flex;
+        flex-direction: column;
+        background-color: $color-White;
+        width: 100%;
+        height: 100%;
+        &-maxW500{
+            max-width: 500px;
+        }
     }
 
     &__header{
+        width: min-content;
         color: black;
-        img{
-
+        &-maxW500{
+            max-width: 500px;
         }
     }
 
     &__main{
+        
         color: black;
-        width: 50%;
+        width: 85%;
+        margin: auto;
+        &-maxW500{
+            max-width: 500px;
+        }
 
         & > &__price{
             color: white;
             background: orange;
+            width: min-content;
+            margin: -25px auto 25px auto;
+            padding: 15px;
+            font-family: $font-Nunito;
         }
             
         & > &__title{
-            color:navy;
+            text-align: center;
+            font-family: $font-RobotoSlab;
+            color:$color-Coal;
+            font-size: 1.8rem;
+            line-height: 1;
+
+            &-bold{
+                    font-weight: 600;
+            }
         }
 
         & > &__textContent{
+            text-align: center;
             color: black;
+            font-family: $font-Nunito;
+            margin-top: 5px;
+            padding: 10px;
+            font-weight: 300;
+            line-height: 2;
+            font-size: medium;
         }
+
+     
+    }
+
+    &__footer{
+
+        color: $color-DarkGrey;
+
+        hr{
+            border: 1px solid $color-Grey;
+            height: 0px;
+        }
+
+        &__title{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 10px auto;
+            font-family: $font-Nunito;
+            text-align: center;
+    
+            &-thick{
+                font-weight: 800;
+            }
+            &-normal{
+                font-weight: 300;
+            }
+        }
+
+
     }
 
 }
