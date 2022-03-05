@@ -1,5 +1,5 @@
 const {getType} = require('jest-get-type')
-const {palindrome, readWords, knownPalindromes, notPalindromes, sortPeople, people} = require('../../public/app')
+const {palindrome, readWords, knownPalindromes, notPalindromes, sortPeople, people} = require('../app')
 
 test('Does readWords() return a single word from a list?', ()=>{
     const palindromeWords = knownPalindromes.includes(readWords(knownPalindromes))

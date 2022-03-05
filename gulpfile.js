@@ -6,11 +6,11 @@ const uglify = require('gulp-uglify')
 function compileCss(){
     return src('./src/**/*.scss')
     .pipe(sass())
-    .pipe(dest("public/static/")
+    .pipe(dest("public/")
     )
 }
 
-function startDevServer(){
+function startExpress(){
     nodemon({
         script: './src/server.js',
         env: {'NODE_ENV' : 'development'}
@@ -20,7 +20,7 @@ function startDevServer(){
 function watchTasks(){
     watch(['./src/**/*.scss'], compileCss)
 }
-function buildProduction(){}
 
-exports.develop = parallel(compileCss, watchTasks, startDevServer)
-exports.production = series(compileCss,watchTasks)
+
+exports.develop = parallel(compileCss, watchTasks, startExpress)
+exports.develop = parallel(compileCss, watchTasks, startExpress)

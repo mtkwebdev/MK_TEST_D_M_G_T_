@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+body main {
+  margin: 20px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #e9e9e9;
+  padding: 15px;
+  width: fit-content;
+}
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
+}
+.card__body {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+.card__body-maxW500 {
+  max-width: 500px;
+}
+.card__header {
+  width: min-content;
+  margin: auto;
+  color: black;
+}
+.card__header img {
+  width: fit-content;
+  height: fit-content;
+  object-fit: contain;
+}
+@media only screen and (max-width: 500px) {
+  .card__header img {
+    width: 90vw;
+    height: min-content;
+    object-fit: scale-down;
+  }
+}
+.card__header-maxW500 {
+  max-width: 500px;
+}
+.card__main {
+  color: black;
+  width: 85%;
+  margin: auto;
+}
+.card__main-maxW500 {
+  max-width: 500px;
+}
+.card__main > .card__main__price {
+  color: white;
+  background: orange;
+  width: min-content;
+  margin: -25px auto 25px auto;
+  padding: 15px;
+  font-family: "Nunito", sans-serif;
+}
+.card__main > .card__main__title {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+  color: #303030;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.card__main > .card__main__title-bold {
+  font-weight: 600;
+}
+.card__main > .card__main__textContent {
+  text-align: center;
+  color: black;
+  font-family: "Nunito", sans-serif;
+  margin-top: 5px;
+  padding: 10px;
+  font-weight: 300;
+  line-height: 2;
+  font-size: medium;
+}
+.card__footer {
+  color: #636363;
+}
+.card__footer hr {
+  border: 1px solid #e9e9e9;
+  height: 0px;
+}
+.card__footer__title {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 10px auto;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+}
+.card__footer__title-thick {
+  font-weight: 800;
+}
+.card__footer__title-normal {
+  font-weight: 300;
+}
