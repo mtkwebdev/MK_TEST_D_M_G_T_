@@ -6,7 +6,7 @@ const uglify = require('gulp-uglify')
 function compileCss(){
     return src('./src/**/*.scss')
     .pipe(sass())
-    .pipe(dest("public/")
+    .pipe(dest("public/static")
     )
 }
 
