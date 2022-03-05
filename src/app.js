@@ -77,7 +77,9 @@ const functions = {
        
        const extractAges = () =>{
             ageByDescending();   
-            return results.map(extract => extract.age);};
+            return results.map(extract => extract.age)
+        };
+
 
        switch(sort){
             case 
@@ -87,7 +89,7 @@ const functions = {
                 'byfirstNameOrder': return firstnameByAlphabeticalOrderA_Z()
                     break; 
             case 
-                'allAges': return extractAges()
+                'extractAges': return extractAges()
                     break;
                 default: return;
        }

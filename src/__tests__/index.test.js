@@ -49,6 +49,13 @@ test('Does sortPeople with ageByDescending return the correct names for the ages
         if(person.name === testCase.testName){
             return testCase.returnedName = person.name, testCase.returnedAge = person.age
         }
-        })
-        expect(testCase.testName && testCase.testAge).toStrictEqual(testCase.returnedName && testCase.returnedAge)
+    })
+    expect(testCase.testName && testCase.testAge).toStrictEqual(testCase.returnedName && testCase.returnedAge)
+})
+
+
+test('Does sortPeople with extractAges return ages as numbers, and also return an array of ages?', ()=>{
+    expect(sortPeople('extractAges')).toStrictEqual([ 50, 42, 29, 23 ])
+    expect(getType(sortPeople('extractAges')[0])).toBe('number')
+    console.log(sortPeople('extractAges')[0])
 })
